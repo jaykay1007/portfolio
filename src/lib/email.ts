@@ -1,8 +1,21 @@
 import { Resend } from 'resend'
 // import nodemailer from 'nodemailer'
 
-// Resend service (recommended - modern and reliable)
-const resend = new Resend(process.env.RESEND_API_KEY)
+let resendClient: Resend | null = null
+
+const getResendClient = () => {
+  const apiKey = process.env.RESEND_API_KEY
+  if (!apiKey) {
+    console.warn('⚠️  RESEND_API_KEY is not set. Skipping Resend email sending.')
+    return null
+  }
+
+  if (!resendClient) {
+    resendClient = new Resend(apiKey)
+  }
+
+  return resendClient
+}
 
 export async function sendEmailWithResend(formData: {
   name: string
@@ -15,6 +28,12 @@ export async function sendEmailWithResend(formData: {
     console.log('📧 Form data:', { name: formData.name, email: formData.email, subject: formData.subject })
     console.log('🔑 API Key exists:', !!process.env.RESEND_API_KEY)
     
+    const resend = getResendClient()
+
+    if (!resend) {
+      throw new Error('Missing Resend API key')
+    }
+
     const { data, error } = await resend.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>', // Using Resend's test domain
       to: ['jaykay.reactdev@gmail.com'], // Your email
