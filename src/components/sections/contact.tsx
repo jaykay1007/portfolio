@@ -186,8 +186,8 @@ export default function ContactSection() {
             <div>
               <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
               <p className="text-muted-foreground mb-8">
-                I'm currently open to new opportunities and would love to hear about your project. 
-                Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                I&apos;m currently open to new opportunities and would love to hear about your project. 
+                Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
               </p>
             </div>
 

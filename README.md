@@ -23,25 +23,6 @@ A modern, animated portfolio website built with Next.js 14, TypeScript, Tailwind
 - **Theme**: Next Themes
 - **Type Animation**: React Type Animation
 
-## 📦 Installation
-
-1. **Clone the repository**:
-```bash
-cd c:/Users/Admin/Documents/Projects/portfolio
-```
-
-2. **Install dependencies**:
-```bash
-npm install
-```
-
-3. **Run the development server**:
-```bash
-npm run dev
-```
-
-4. **Open your browser**:
-Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## 🏗️ Project Structure
 

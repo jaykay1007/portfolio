@@ -83,7 +83,7 @@ export default function HeroSection() {
           {/* Name and Title */}
           <motion.div variants={itemVariants} className="space-y-4">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
-              Hi, I'm{' '}
+              Hi, I&apos;m{' '}
               <span className="bg-gradient-to-r from-purple-600 via-blue-500 to-teal-400 bg-clip-text text-transparent">
                 {personal.name}
               </span>
